@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+
+:root{
+  --main-green : #44B7AA;
+  --secondary-green : #86B8B2;
+  --third-green : #DEECEA;
+  --main-grey : #707070;
+  --secondary-grey : #3736367F;
+  --main-black : #373636;
+  font-family: "Work sans",sans-serif;
+}
+
+html{
+  position: relative;
+}
+
+body{
+  margin: 0;
+}
+
+.lien{
+  text-decoration: none;
+  color: #fdfdfd;
+  :hover{
+    color: #fdfdfd;
+  }
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+li{
+  text-decoration: none;
+}
+
+//CSS du header
+
+header {
+  margin: 0;
+  background-color: var(--main-green);
+
+}
+
+#logo-header{
+  height: 33px;
+  margin: 8px 0 8px 25px;
+}
+
+#contact{
+  position: absolute;
+}
+
+/* CSS du footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--secondary-green);
+  font-weight: normal;
+
+
+  div {
+    padding: 0.5em 0 0.5em;
+    margin: 1em 0 1em 0;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  div li:first-child {
+    margin-bottom: 1.3em;
+  }
+
+}
+
+#logo-footer{
+  grid-column: 1 /span 2;
+  margin: 1.5em 2em 0.5em 2em;
+}
+
+
+#left-block{
+  grid-column: 1/ span 1;
+  ul{
+    padding: 0;
+  }
+}
+
+#right-block{
+  grid-column: 2/span 1;
+  border-left: solid white 0.1em;
+  ul{
+    padding: 0;
+  }
+}
+
+// Page d'accueil
+
+#home{
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1fr,10);
+  grid-template-rows: repeat(1fr,9);
+}
+#background-home{
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  top: 40px;
+  left: -47px;
+}
+
+#logo-home{
+  display: block;
+  width: 60%;
+  margin: 1.9em auto 2em auto;
+}
+
+#kids{
+  width: 30%;
+}
+
+

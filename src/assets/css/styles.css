@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/worksans/v13/QGY9z_wNahGAdqQ43Rh_ebrnlwyYfEPxPoGU3msJow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/worksans/v13/QGY9z_wNahGAdqQ43Rh_ebrnlwyYfEPxPoGUOWwJow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/worksans/v13/QGY9z_wNahGAdqQ43Rh_ebrnlwyYfEPxPoGUd2wJow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/worksans/v13/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXNig.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/worksans/v13/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QNig.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/worksans/v13/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K-DQNig.ttf) format('truetype');
+}
+:root {
+  --main-green: #44B7AA;
+  --secondary-green: #86B8B2;
+  --third-green: #DEECEA;
+  --main-grey: #707070;
+  --secondary-grey: #3736367F;
+  --main-black: #373636;
+  font-family: "Work sans", sans-serif;
+}
+html {
+  position: relative;
+}
+body {
+  margin: 0;
+}
+.lien {
+  text-decoration: none;
+  color: #fdfdfd;
+}
+.lien :hover {
+  color: #fdfdfd;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  text-decoration: none;
+}
+header {
+  margin: 0;
+  background-color: var(--main-green);
+}
+#logo-header {
+  height: 33px;
+  margin: 8px 0 8px 25px;
+}
+#contact {
+  position: absolute;
+}
+/* CSS du footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--secondary-green);
+  font-weight: normal;
+}
+footer div {
+  padding: 0.5em 0 0.5em;
+  margin: 1em 0 1em 0;
+}
+footer li {
+  text-align: center;
+}
+footer div li:first-child {
+  margin-bottom: 1.3em;
+}
+#logo-footer {
+  grid-column: 1 / span 2;
+  margin: 1.5em 2em 0.5em 2em;
+}
+#left-block {
+  grid-column: 1 / span 1;
+}
+#left-block ul {
+  padding: 0;
+}
+#right-block {
+  grid-column: 2 / span 1;
+  border-left: solid white 0.1em;
+}
+#right-block ul {
+  padding: 0;
+}
+#home {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1fr, 10);
+  grid-template-rows: repeat(1fr, 9);
+}
+#background-home {
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  top: 40px;
+  left: -47px;
+}
+#logo-home {
+  display: block;
+  width: 60%;
+  margin: 1.9em auto 2em auto;
+}
+#kids {
+  width: 30%;
+}
+/*# sourceMappingURL=styles.css.map */
