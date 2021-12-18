@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <router-link to="/"><img id="logo-header" src="@/assets/img/logos/blanc-seul.svg" alt=""></router-link>
+      <router-link @click="close" to="/"><img id="logo-header" src="@/assets/img/logos/blanc-seul.svg" alt=""></router-link>
       <nav>
         <div>
           <div class="nav-toggle" onclick="document.documentElement.classList.toggle('menu-open')">
@@ -63,6 +63,8 @@
       </div>
     </header>
     <router-view/>
+<!--      <transition name="fade" mode="out-in">-->
+<!--    </transition>-->
     <footer>
       <img id="logo-footer" src="@/assets/img/logos/Global-blanc.svg" alt="">
       <div id="left-block">
@@ -111,4 +113,13 @@ export default {
 <style>
 @import "assets/css/styles.css";
 @import "assets/css/menu.css";
+
+/*.fade-enter, fade-leave-to {*/
+/*  opacity: 0;*/
+/*  transform: translateX(2em);*/
+/*}*/
+
+/*.fade-enter-active, fade-leave-active {*/
+/*  transition: all 3s ease;*/
+/*}*/
 </style>

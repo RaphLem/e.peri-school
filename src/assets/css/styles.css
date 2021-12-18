@@ -49,9 +49,6 @@
   --main-black: #373636;
   font-family: "Work sans", sans-serif;
 }
-html {
-  position: relative;
-}
 body {
   margin: 0;
 }
@@ -114,25 +111,36 @@ footer div li:first-child {
 #right-block ul {
   padding: 0;
 }
-#home {
+#home-heading {
   overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(1fr, 10);
-  grid-template-rows: repeat(1fr, 9);
+  width: 100%;
+  height: 12em;
+  position: relative;
 }
 #background-home {
   margin: 0;
+  width: 120%;
   position: absolute;
   z-index: -1;
-  top: 40px;
-  left: -47px;
+  top: -1.5em;
+  left: -4em;
 }
 #logo-home {
-  display: block;
-  width: 60%;
-  margin: 1.9em auto 2em auto;
+  position: absolute;
+  width: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 2em;
 }
 #kids {
-  width: 30%;
+  position: absolute;
+  width: 27%;
+  top: 6.2em;
+  right: 2em;
+}
+.event-image {
+  width: 65%;
+  height: 80%;
 }
 /*# sourceMappingURL=styles.css.map */
