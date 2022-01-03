@@ -133,11 +133,13 @@
     justify-content: space-evenly;
     align-items: center;
   }
-  .nav-bar li {
-    width: 60px;
+  .nav-bar #item-contact {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+  .nav-bar li {
+    width: 70px;
     margin-right: 10%;
   }
   .nav-bar li img {
@@ -145,6 +147,9 @@
     margin-right: 10%;
   }
   .nav-bar li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     font-size: 0.65em;
   }
 }

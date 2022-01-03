@@ -42,14 +42,17 @@
           <div>
             <ul>
               <li>
-                <img src="@/assets/img/icons/Icon_newspaper.svg" alt="">
-                <router-link class="lien" to="/news">Actualités</router-link>
+                <router-link class="lien" to="/news">
+                  <img src="@/assets/img/icons/Icon_newspaper.svg" alt="">
+                  Actualités
+                  </router-link>
               </li>
               <li>
-                <img src="@/assets/img/icons/Icon_info.svg" alt="">
-                <router-link class="lien" to="/about">À propos</router-link>
+                <router-link class="lien" to="/about">
+                  <img src="@/assets/img/icons/Icon_info.svg" alt="">
+                  À propos</router-link>
               </li>
-              <li>
+              <li id="item-contact">
                 <img class="img-fluid" src="@/assets/img/icons/Icon_contacts.svg" alt="">
                 <a class="lien">Contact</a>
               </li>
