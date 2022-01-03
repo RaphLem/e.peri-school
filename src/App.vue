@@ -32,8 +32,11 @@
                 <p class="lien">Contact</p>
               </li>
               <li>
+                <router-link class="lien" to="/Profile">
                   <img data-toggle="modal" data-target="#cnxModal" src="@/assets/img/composants/se_connecter_black.svg" @click="close()"
-                                         alt="Se connecter">
+                       alt="Se connecter">
+                </router-link>
+
               </li>
             </ul>
           </div>
