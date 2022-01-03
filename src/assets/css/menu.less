@@ -131,6 +131,56 @@
 .menu-open .menu li:nth-child(n+3) { transition-delay: .4s; }
 //Menu déroulant
 
+header{
+  @media(min-width: 600px){
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    nav{
+      width: 70%;
+    }
+  }
+}
+
 .nav-bar{
   display: none;
+  @media(min-width: 600px){
+    display: unset;
+    ul {
+      margin: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    li{
+      width: 60px;
+      @media(min-width: 1000px){
+        width: 100px;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-right: 10%;
+      img{
+        height: 25px;
+        margin-right: 10%;
+        @media(min-width: 1000px){
+          height: 29px;
+          margin-right: 20%;
+        }
+      }
+      a{
+        font-size: 0.65em;
+        @media(min-width: 1000px){
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+#burger-menu{
+  @media(min-width: 600px){
+    display:none;
+  }
 }
