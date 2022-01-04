@@ -223,6 +223,50 @@ footer div li:first-child {
     font-size: 1.5em;
   }
 }
+#about .background-home {
+  width: 100%;
+}
+#about h2 {
+  text-align: center;
+}
+#about p.description {
+  text-align: center;
+  margin-bottom: 0;
+}
+#about #acteurs {
+  background-color: var(--secondary-green);
+}
+#about-heading {
+  position: relative;
+  margin-bottom: 5%;
+}
+#about-heading h1,
+#about-heading h2 {
+  position: absolute;
+  color: #fdfdfd;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+#about-heading h1 {
+  display: block;
+  font-size: 1em;
+  top: 20%;
+}
+@media (min-width: 600px) {
+  #about-heading h1 {
+    font-size: 2em;
+  }
+}
+#about-heading h2 {
+  font-size: 0.8em;
+  top: 60%;
+}
+@media (min-width: 600px) {
+  #about-heading h2 {
+    font-size: 1.5em;
+  }
+}
 #black-filter {
   position: absolute;
   top: 0;
@@ -269,5 +313,24 @@ footer div li:first-child {
   font-size: 0.7em;
   margin: 0;
   padding: 0.3em;
+}
+#profile {
+  text-align: center;
+}
+#profile h1 {
+  color: var(--main-green);
+  font-weight: normal;
+  font-size: 1.3em;
+  margin-bottom: 9%;
+}
+#profile .background-home {
+  width: 113%;
+  height: 100%;
+  margin-left: -13% !important;
+}
+#profile-heading {
+  overflow: hidden;
+  margin-bottom: 10%;
+  position: relative;
 }
 /*# sourceMappingURL=styles.css.map */

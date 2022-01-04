@@ -1,6 +1,6 @@
 <template>
-  <div id="news">
-    <div id="news-heading">
+  <div id="about">
+    <div id="about-heading">
       <img class="background-home" src="@/assets/img/picture/E-Perischool10Nov20TIML0150.jpg"
            alt="">
       <div id="black-filter"></div>
@@ -10,8 +10,8 @@
 
     <div id="programme">
     <h2>Le programme pédagogique</h2>
-      <p>Les 10 séances s’articulent autour de deux axes d’apprentissage : la programmation et l’impression 3D.</p>
-      <p>Ces deux thématiques sont réparties selon le planning suivant :</p>
+      <p class="description">Les 10 séances s’articulent autour de deux axes d’apprentissage : la programmation et l’impression 3D.</p>
+      <p class="description">Ces deux thématiques sont réparties selon le planning suivant :</p>
 
       <h3>1. Présentation du programme & découverte des différents composants</h3>
       <p>Découvrir les différents composants du kit de programmation : le compteur, la led et le potentiomètre. Réalisation des premiers assemblages simples (sans programmation).</p>
@@ -49,7 +49,7 @@
     </div>
     <div id="acteurs">
       <h2>Les acteurs</h2>
-      <p>Un projet réalisé par</p>
+      <p class="description">Un projet réalisé par</p>
       <div>
         <h3>Numérica SEM</h3>
         <ul>
@@ -75,8 +75,20 @@
       </div>
     </div>
     <div id="soutiens">
-      <h1>Nos soutiens</h1>
-      <p>Sous la maitrise d'ouvrage et avec le soutien de</p>
+      <h2>Nos soutiens</h2>
+      <p class="description">Sous la maitrise d'ouvrage et avec le soutien de</p>
+      <img src="../assets/img/img-partenaires/Logo_Grand_Belfort.png" alt="logo grand belfort" height="494" width="371"/>
+      <img src="../assets/img/img-partenaires/Logo_PMA-petit.jpg" alt="Logo pays de montbéliard" height="500" width="900"/>
+      <p class="description">Avec le soutien de</p>
+      <img src="../assets/img/img-partenaires/banque_des_territoires.png" alt="Logo Banque des territoires" height="445" width="910"/>
+      <img src="../assets/img/img-partenaires/territoire.jpg" alt="Logo territoires d'innovation" height="400" width="1100"/>
+      <img src="../assets/img/img-partenaires/Bourgogne-Franche-Comte_2016.svg.png" alt="Logo région bourgogne franche comté" height="958" width="1200"/>
+
     </div>
   </div>
 </template>
+<script>
+export default {
+  name: 'About',
+}
+</script>
