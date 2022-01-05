@@ -233,16 +233,26 @@ footer div li:first-child {
   text-align: center;
   margin-bottom: 0;
 }
+#about #programme {
+  padding: 5%;
+}
 #about #programme h3 {
   color: var(--main-green);
 }
 #about #programme img {
-  width: 100%;
-  margin-bottom: 10%;
+  width: 75%;
+  margin: 0 auto 10% auto;
+  display: block;
+}
+#about #programme .container {
+  margin-top: 5%;
 }
 @media (min-width: 600px) {
   #about #programme .container {
     display: flex;
+  }
+  #about #programme .container img {
+    width: 100%;
   }
   #about #programme .container div {
     width: 40%;
@@ -299,8 +309,9 @@ footer div li:first-child {
   align-items: center;
 }
 #about #soutiens img {
-  width: 100%;
+  width: 50%;
   margin: auto;
+  display: block;
 }
 #about #soutiens p:nth-child(2n) {
   margin-top: 2em;

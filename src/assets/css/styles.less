@@ -245,25 +245,29 @@ footer {
 
 
   #programme{
+    padding: 5%;
     h3{
       color: var(--main-green);
     }
     img{
-      width: 100%;
-      margin-bottom: 10%;
+      width: 75%;
+      margin: 0 auto 10% auto;
+      display: block;
     }
-
+    .container{
+      margin-top: 5%;
+    }
     @media(min-width: 600px){
-
       .container{
       display: flex;
-
+      img{
+        width: 100%;
+      }
       div{
         width: 40%;
         margin: 5%;
       }
     }
-
   }
   }
   #acteurs{
@@ -319,9 +323,9 @@ footer {
     padding:  1em 0;
     align-items: center;
     img{
-      width: 100%;
+      width: 50%;
       margin: auto;
-
+      display: block;
     }
     p:nth-child(2n){
       margin-top: 2em;
