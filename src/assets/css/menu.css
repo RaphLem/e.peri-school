@@ -133,11 +133,13 @@
     justify-content: space-evenly;
     align-items: center;
   }
-  .nav-bar li {
-    width: 60px;
+  .nav-bar #item-contact {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+  .nav-bar li {
+    width: 70px;
     margin-right: 10%;
   }
   .nav-bar li img {
@@ -145,7 +147,10 @@
     margin-right: 10%;
   }
   .nav-bar li a {
-    font-size: 0.65em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.53em;
   }
 }
 @media (min-width: 600px) and (min-width: 1000px) {
@@ -157,6 +162,11 @@
   .nav-bar li img {
     height: 29px;
     margin-right: 20%;
+  }
+}
+@media (min-width: 600px) and (min-width: 700px) {
+  .nav-bar li a {
+    font-size: 0.65em;
   }
 }
 @media (min-width: 600px) and (min-width: 1000px) {

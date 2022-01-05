@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <header>
       <router-link @click="close" to="/"><img id="logo-header" src="@/assets/img/logos/blanc-seul.svg" alt="">
       </router-link>
@@ -17,7 +17,7 @@
               </li>
               <li @click="close()">
                 <router-link class="lien" to="/news">
-                  <img id="news" class="img-fluid" src="@/assets/img/icons/Icon_black_newspaper.svg" alt="">
+                  <img class="img-fluid" src="@/assets/img/icons/Icon_black_newspaper.svg" alt="">
                   Actualités
                 </router-link>
               </li>
@@ -27,16 +27,9 @@
                   À propos
                 </router-link>
               </li>
-              <li @click="close()">
+              <li @click="close()" v-b-modal.modal-prevent-closing>
                 <img src="@/assets/img/icons/Icon_black_contacts.svg" alt="">
                 <p class="lien">Contact</p>
-              </li>
-              <li>
-                <router-link class="lien" to="/Profile">
-                  <img data-toggle="modal" data-target="#cnxModal" src="@/assets/img/composants/se_connecter_black.svg" @click="close()"
-                       alt="Se connecter">
-                </router-link>
-
               </li>
             </ul>
           </div>
@@ -45,19 +38,20 @@
           <div>
             <ul>
               <li>
-                <img src="@/assets/img/icons/Icon_newspaper.svg" alt="">
-                <router-link class="lien" to="/news">Actualités</router-link>
+                <router-link class="lien" to="/news">
+                  <img src="@/assets/img/icons/Icon_newspaper.svg" alt="">
+                  Actualités
+                </router-link>
               </li>
               <li>
-                <img src="@/assets/img/icons/Icon_info.svg" alt="">
-                <router-link class="lien" to="/about">À propos</router-link>
+                <router-link class="lien" to="/about">
+                  <img src="@/assets/img/icons/Icon_info.svg" alt="">
+                  À propos
+                </router-link>
               </li>
-              <li>
+              <li id="item-contact" v-b-modal.modal-prevent-closing>
                 <img class="img-fluid" src="@/assets/img/icons/Icon_contacts.svg" alt="">
                 <a class="lien">Contact</a>
-              </li>
-              <li>
-                <img data-toggle="modal" data-target="#cnxModal" id="connexion-icon" src="@/assets/img/composants/se_connecter.svg" alt="Se connecter">
               </li>
             </ul>
           </div>
@@ -66,83 +60,43 @@
       </nav>
     </header>
     <router-view/>
-    <!-- Modal connexion -->
-    <div
-        class="modal fade"
-        id="cnxModal"
-        ref="cnxModal"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Connexion à l'application</h5>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <div class="modal-body">
-
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Login</span>
-              </div>
-              <input type="text" class="form-control" placeholder="Login"
-                     v-model="utilisateur.username"
-              >
-            </div>
-
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Mot de passe</span>
-              </div>
-              <input type="text" class="form-control" placeholder="Mot de passe"
-                     v-model="utilisateur.password"
-              >
-            </div>
-
-          </div>
-
-          <!--            <div v-if="message != null" class="alert alert-warning text-center" role="alert">-->
-          <!--              {{message}}-->
-          <!--            </div>-->
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark"
-                    @click="deconnect" data-dismiss="modal">
-              Deconnexion</button>
-
-            <button type="button" class="btn btn-dark"
-                    @click="connect"
-            >
-              Connexion</button>
-          </div>
-        </div>
-      </div>
+    <div id="formulaire">
+      <b-modal
+          id="modal-prevent-closing"
+          ref="modal"
+          title="Une question ? Contactez-nous"
+          @show="resetModal"
+          @hidden="resetModal"
+          @ok="handleOk"
+      >
+        <form ref="form" @submit.stop.prevent="handleSubmit">
+          <b-form-group
+              label="Name"
+              label-for="name-input"
+              invalid-feedback="Name is required"
+              :state="nameState">
+            <b-form-input
+                id="name-input"
+                v-model="name"
+                :state="nameState"
+                required
+            ></b-form-input>
+          </b-form-group>
+          <b-form-group
+                label="E-mail"
+                label-for="email-input"
+                invalid-feedback="E-mail is required"
+                :state="emailState">
+              <b-form-input
+                  id="email-input"
+                  v-model="email"
+                  :state="emailState"
+                  required
+              ></b-form-input>
+          </b-form-group>
+        </form>
+      </b-modal>
     </div>
-    <!-- Modale erreur -->
-    <div
-        class="modal fade"
-        id="errorModal"
-        ref="errorModal"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content" style="background-color:transparent!important;">
-          <div class="modal-body">
-            <!--              <div v-if="message != null"-->
-            <!--                   class="alert alert-warning text-center" role="alert">-->
-            <!--                {{message}}-->
-            <!--              </div>-->
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </template>
 
@@ -152,26 +106,56 @@
 
 export default {
   name: 'App',
-  components: {
-  },
+  components: {},
   data() {
     return {
-      utilisateur:{
-        username:null,
-        password:null,
+      utilisateur: {
+        username: null,
+        password: null,
       },
+      message: null,
       visible: false,
+      name: '',
+      email: '',
+      nameState: null,
+      emailState: null,
     }
   },
   created() {
 
   },
   methods: {
-    connect:function(){},
-    deconnect:function(){},
     close() {
-      console.log("ca ferme");
       document.documentElement.classList.remove('menu-open')
+    },
+
+    //Formulaire de contact
+    checkFormValidity() {
+      const valid = this.$refs.form.checkValidity()
+      this.nameState = valid
+      this.emailState = valid
+      return valid
+    },
+    resetModal() {
+      this.name = ''
+      this.nameState = null
+    },
+    handleOk(bvModalEvt) {
+      // Prevent modal from closing
+      bvModalEvt.preventDefault()
+      // Trigger submit handler
+      this.handleSubmit()
+    },
+    handleSubmit() {
+      // Exit when the form isn't valid
+      if (!this.checkFormValidity()) {
+        return
+      }
+      // Push the name to submitted names
+      // Hide the modal manually
+      this.$nextTick(() => {
+        this.$bvModal.hide('modal-prevent-closing')
+      })
     }
   }
 }
