@@ -112,9 +112,7 @@
       <img src="../assets/img/img-partenaires/Bourgogne-Franche-Comte_2016.svg.png" alt="Logo région bourgogne franche comté" />
     </div>
     </div>
-  </div>
-
-  <footer>
+    <footer>
     <img id="logo-footer" src="@/assets/img/logos/Global-blanc.svg" alt="">
     <div id="left-block">
       <ul>
@@ -137,6 +135,9 @@
       </ul>
     </div>
   </footer>
+  </div>
+
+
 </template>
 <script>
 export default {
