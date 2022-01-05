@@ -242,46 +242,105 @@ footer {
     text-align: center;
     margin-bottom: 0;
   }
-  #acteurs{
-    background-color: var(--secondary-green);
-    img{
-      width: 100%;
-    }
-  }
-  .container{
-    display: flex;
 
-    div{
-      width: 20%;
-      margin: 5%;
-    }
-  }
 
   #programme{
     h3{
       color: var(--main-green);
     }
-  }
-  .container{
-    display: flex;
-    align-items: center;
+    img{
+      width: 100%;
+      margin-bottom: 10%;
+    }
+
+    @media(min-width: 600px){
+
+      .container{
+      display: flex;
+
       div{
         width: 40%;
         margin: 5%;
+      }
+    }
+
+  }
+  }
+  #acteurs{
+    padding:  1em 0;
+    background-color: var(--third-green);
+    h3{
+      margin-top: 1em;
+      font-size: 1em;
+    }
+    img{
+      width: 40%;
+      border-radius: 5px;
+    }
+    @media(max-width: 600px){
+      .container>div{
+        display: flex;
+        margin: 1em;
+        div,img{
+          width: 45%;
+          margin: auto;
+        }
+        img{
+          margin-left: -10%;
+        }
+      }
+      .container>div:nth-child(2n){
+
+      }
+    }
+
+    @media(min-width: 600px){
+      img{
+      width: 100%;
+    }
+      .container{
+      display: flex;
+      ul{
+        padding-left: 0;
+      }
+      div{
+        text-align: center;
+        width: 30%;
+        margin: 2em auto;
+        div{
+          width: 100%;
+        }
+      }
+    }
     }
   }
 
   #soutiens{
-    .container{
-      display: flex;
-      align-items: center;
-    }
+    padding:  1em 0;
+    align-items: center;
     img{
-      width: 30%;
-      height: max-content;
+      width: 100%;
       margin: auto;
 
     }
+    p:nth-child(2n){
+      margin-top: 2em;
+    }
+
+    @media(min-width: 600px){
+      .container{
+      display: flex;
+      align-items: center;
+    }
+      img{
+       width: 30%;
+       height: max-content;
+       margin: auto;
+
+     }
+    }
+
+
   }
 }
 

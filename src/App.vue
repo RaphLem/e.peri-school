@@ -142,29 +142,7 @@
         </div>
       </div>
     </div>
-    <footer>
-      <img id="logo-footer" src="@/assets/img/logos/Global-blanc.svg" alt="">
-      <div id="left-block">
-        <ul>
-          <li>
-            <router-link class="lien" to="/news">Actualités</router-link>
-          </li>
-          <li>
-            <router-link class="lien" to="/about">À propos</router-link>
-          </li>
-        </ul>
-      </div>
-      <div id="right-block">
-        <ul>
-          <li>
-            <router-link class="lien" to="/mentions">Mentions légales</router-link>
-          </li>
-          <li>
-            <p class="lien">Nous Contacter</p>
-          </li>
-        </ul>
-      </div>
-    </footer>
+
   </div>
 </template>
 

@@ -233,38 +233,88 @@ footer div li:first-child {
   text-align: center;
   margin-bottom: 0;
 }
-#about #acteurs {
-  background-color: var(--secondary-green);
-}
-#about #acteurs img {
-  width: 100%;
-}
-#about .container {
-  display: flex;
-}
-#about .container div {
-  width: 20%;
-  margin: 5%;
-}
 #about #programme h3 {
   color: var(--main-green);
 }
-#about .container {
-  display: flex;
-  align-items: center;
+#about #programme img {
+  width: 100%;
+  margin-bottom: 10%;
 }
-#about .container div {
+@media (min-width: 600px) {
+  #about #programme .container {
+    display: flex;
+  }
+  #about #programme .container div {
+    width: 40%;
+    margin: 5%;
+  }
+}
+#about #acteurs {
+  padding: 1em 0;
+  background-color: var(--third-green);
+}
+#about #acteurs h3 {
+  margin-top: 1em;
+  font-size: 1em;
+}
+#about #acteurs img {
   width: 40%;
-  margin: 5%;
+  border-radius: 5px;
 }
-#about #soutiens .container {
-  display: flex;
+@media (max-width: 600px) {
+  #about #acteurs .container > div {
+    display: flex;
+    margin: 1em;
+  }
+  #about #acteurs .container > div div,
+  #about #acteurs .container > div img {
+    width: 45%;
+    margin: auto;
+  }
+  #about #acteurs .container > div img {
+    margin-left: -10%;
+  }
+}
+@media (min-width: 600px) {
+  #about #acteurs img {
+    width: 100%;
+  }
+  #about #acteurs .container {
+    display: flex;
+  }
+  #about #acteurs .container ul {
+    padding-left: 0;
+  }
+  #about #acteurs .container div {
+    text-align: center;
+    width: 30%;
+    margin: 2em auto;
+  }
+  #about #acteurs .container div div {
+    width: 100%;
+  }
+}
+#about #soutiens {
+  padding: 1em 0;
   align-items: center;
 }
 #about #soutiens img {
-  width: 30%;
-  height: max-content;
+  width: 100%;
   margin: auto;
+}
+#about #soutiens p:nth-child(2n) {
+  margin-top: 2em;
+}
+@media (min-width: 600px) {
+  #about #soutiens .container {
+    display: flex;
+    align-items: center;
+  }
+  #about #soutiens img {
+    width: 30%;
+    height: max-content;
+    margin: auto;
+  }
 }
 #about-heading {
   position: relative;
