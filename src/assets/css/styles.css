@@ -236,6 +236,36 @@ footer div li:first-child {
 #about #acteurs {
   background-color: var(--secondary-green);
 }
+#about #acteurs img {
+  width: 100%;
+}
+#about .container {
+  display: flex;
+}
+#about .container div {
+  width: 20%;
+  margin: 5%;
+}
+#about #programme h3 {
+  color: var(--main-green);
+}
+#about .container {
+  display: flex;
+  align-items: center;
+}
+#about .container div {
+  width: 40%;
+  margin: 5%;
+}
+#about #soutiens .container {
+  display: flex;
+  align-items: center;
+}
+#about #soutiens img {
+  width: 30%;
+  height: max-content;
+  margin: auto;
+}
 #about-heading {
   position: relative;
   margin-bottom: 5%;

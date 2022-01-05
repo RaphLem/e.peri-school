@@ -12,45 +12,52 @@
     <h2>Le programme pédagogique</h2>
       <p class="description">Les 10 séances s’articulent autour de deux axes d’apprentissage : la programmation et l’impression 3D.</p>
       <p class="description">Ces deux thématiques sont réparties selon le planning suivant :</p>
+      <div class="container">
+      <div>
+        <h3>1. Présentation du programme & découverte des différents composants</h3>
+        <p>Découvrir les différents composants du kit de programmation : le compteur, la led et le potentiomètre. Réalisation des premiers assemblages simples (sans programmation).</p>
 
-      <h3>1. Présentation du programme & découverte des différents composants</h3>
-      <p>Découvrir les différents composants du kit de programmation : le compteur, la led et le potentiomètre. Réalisation des premiers assemblages simples (sans programmation).</p>
+        <h3>2. Programmation : découverte du
+          composant de programmation</h3>
+        <p>Découvrir le composant « programmation » et la plateforme (logiciel)LittleBits Code Bit qui permet de programmer les différents composants. Réaliser des programmes simples : programmer une puissance électrique en sortie, un capteur de lumière et un bouton buzzer.</p>
 
-      <h3>2. Programmation : découverte du
-        composant de programmation</h3>
-      <p>Découvrir le composant « programmation » et la plateforme (logiciel)LittleBits Code Bit qui permet de programmer les différents composants. Réaliser des programmes simples : programmer une puissance électrique en sortie, un capteur de lumière et un bouton buzzer.</p>
+        <h3>3. Programmation : découverte du
+          composant « moteur »</h3>
+        <p>Découvrir le fonctionnement du composant « moteur ». Commencer à programmer le moteur en avant et en arrière. Réaliser un assemblage de composants plus complexes avec le potentiomètre, l’afficheur numérique, l’alarme et le détecteur de lumière (ex : si la lumière est inférieur à 50, l’alarme se déclenche).</p>
 
-      <h3>3. Programmation : découverte du
-        composant « moteur »</h3>
-      <p>Découvrir le fonctionnement du composant « moteur ». Commencer à programmer le moteur en avant et en arrière. Réaliser un assemblage de composants plus complexes avec le potentiomètre, l’afficheur numérique, l’alarme et le détecteur de lumière (ex : si la lumière est inférieur à 50, l’alarme se déclenche).</p>
+        <h3>4. Conception 3D</h3>
+        <p>Découvrir l’outil de modélisation Tinkercad. Concevoir des formes géométriques simples pour découvrir les différentes fonctionnalités de la plateforme.</p>
+      </div>
+      <div>
+        <h3>5. Conception 3D</h3>
+        <p>Concevoir de formes plus complexes à partir de formes simples. Maitriser davantage l’outil de modélisation.</p>
 
-      <h3>4. Conception 3D</h3>
-      <p>Découvrir l’outil de modélisation Tinkercad. Concevoir des formes géométriques simples pour découvrir les différentes fonctionnalités de la plateforme.</p>
+        <h3>6. Impression 3D</h3>
+        <p>Créer et modéliser une forme encore plus complexe : créer un pot à crayons personnalisée avec perçage.</p>
 
-      <h3>5. Conception 3D</h3>
-      <p>Concevoir de formes plus complexes à partir de formes simples. Maitriser davantage l’outil de modélisation.</p>
+        <h3>7. Impression 3D</h3>
+        <p>Découvrir le fonctionnement d’une imprimante 3D. Découvrir la plateforme XYZmaker qui permet d’imprimer les éléments modélisés en amont.</p>
 
-      <h3>6. Impression 3D</h3>
-      <p>Créer et modéliser une forme encore plus complexe : créer un pot à crayons personnalisée avec perçage.</p>
+        <h3>8. Programmation : assemblage de
+          composants avec boucles et conditions</h3>
+        <p>Monter l’Autobot et programmer les moteurs par le biais de boucles et de conditions pour qu’il se déplace en avant, en arrière, et effectue des virages.</p>
 
-      <h3>7. Impression 3D</h3>
-      <p>Découvrir le fonctionnement d’une imprimante 3D. Découvrir la plateforme XYZmaker qui permet d’imprimer les éléments modélisés en amont.</p>
+        <h3>9. Programmation : assemblage de
+          composants avec boucles et conditions</h3>
+        <p>Programmer des parcours de l’Autobot (en O, en U et en 8).</p>
 
-      <h3>8. Programmation : assemblage de
-        composants avec boucles et conditions</h3>
-      <p>Monter l’Autobot et programmer les moteurs par le biais de boucles et de conditions pour qu’il se déplace en avant, en arrière, et effectue des virages.</p>
-
-      <h3>9. Programmation : assemblage de
-        composants avec boucles et conditions</h3>
-      <p>Programmer des parcours de l’Autobot (en O, en U et en 8).</p>
-
-      <h3>10. Assemblage final du projet</h3>
-      <p>Programmer des parcours complexes de l’autobot (ex : détection d’obstacles)</p>
+        <h3>10. Assemblage final du projet</h3>
+        <p>Programmer des parcours complexes de l’autobot (ex : détection d’obstacles)</p>
+      </div>
+      </div>
     </div>
     <div id="acteurs">
       <h2>Les acteurs</h2>
       <p class="description">Un projet réalisé par</p>
+      <div class="container">
       <div>
+
+        <img src="../assets/img/img-acteurs/Semnumerica.jpg" alt="photo du batiment de numérica SEM"/>
         <h3>Numérica SEM</h3>
         <ul>
           <li>Maitrise d'ouvrage</li>
@@ -60,6 +67,7 @@
         </ul>
       </div>
       <div>
+        <img src="../assets/img/img-acteurs/Pavillion_des_sciences.jpg" alt="photo du pavillon des sciences"/>
         <h3>Le pavillon des sciences</h3>
         <ul>
           <li>Formation</li>
@@ -68,22 +76,27 @@
         </ul>
       </div>
       <div>
+        <img src="../assets/img/img-acteurs/francas_du_doubs.jpg" alt="photo de l'association Les Francas du Doubs"/>
         <h3>Les Francas su Doubs</h3>
         <ul>
           <li>Animation</li>
         </ul>
       </div>
+        </div>
     </div>
     <div id="soutiens">
       <h2>Nos soutiens</h2>
       <p class="description">Sous la maitrise d'ouvrage et avec le soutien de</p>
-      <img src="../assets/img/img-partenaires/Logo_Grand_Belfort.png" alt="logo grand belfort" height="494" width="371"/>
-      <img src="../assets/img/img-partenaires/Logo_PMA-petit.jpg" alt="Logo pays de montbéliard" height="500" width="900"/>
+      <div class="container">
+      <img src="../assets/img/img-partenaires/grand-belfort.jpg" alt="logo grand belfort" />
+      <img src="../assets/img/img-partenaires/Pays_de_Montbeliard.png" alt="Logo pays de montbéliard" />
+      </div>
       <p class="description">Avec le soutien de</p>
-      <img src="../assets/img/img-partenaires/banque_des_territoires.png" alt="Logo Banque des territoires" height="445" width="910"/>
-      <img src="../assets/img/img-partenaires/territoire.jpg" alt="Logo territoires d'innovation" height="400" width="1100"/>
-      <img src="../assets/img/img-partenaires/Bourgogne-Franche-Comte_2016.svg.png" alt="Logo région bourgogne franche comté" height="958" width="1200"/>
-
+      <div class="container">
+      <img src="../assets/img/img-partenaires/banque_des_territoires.png" alt="Logo Banque des territoires" />
+      <img src="../assets/img/img-partenaires/territoire.jpg" alt="Logo territoires d'innovation" />
+      <img src="../assets/img/img-partenaires/Bourgogne-Franche-Comte_2016.svg.png" alt="Logo région bourgogne franche comté" />
+    </div>
     </div>
   </div>
 </template>
