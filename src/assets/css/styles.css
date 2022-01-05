@@ -307,6 +307,130 @@ footer div li:first-child {
     font-size: 1.5em;
   }
 }
+#about .background-home {
+  width: 100%;
+}
+#about h2 {
+  text-align: center;
+}
+#about p.description {
+  text-align: center;
+  margin-bottom: 0;
+}
+#about #programme h3 {
+  color: var(--main-green);
+}
+#about #programme img {
+  width: 100%;
+  margin-bottom: 10%;
+}
+@media (min-width: 600px) {
+  #about #programme .container {
+    display: flex;
+  }
+  #about #programme .container div {
+    width: 40%;
+    margin: 5%;
+  }
+}
+#about #acteurs {
+  padding: 1em 0;
+  background-color: var(--third-green);
+}
+#about #acteurs h3 {
+  margin-top: 1em;
+  font-size: 1em;
+}
+#about #acteurs img {
+  width: 40%;
+  border-radius: 5px;
+}
+@media (max-width: 600px) {
+  #about #acteurs .container > div {
+    display: flex;
+    margin: 1em;
+  }
+  #about #acteurs .container > div div,
+  #about #acteurs .container > div img {
+    width: 45%;
+    margin: auto;
+  }
+  #about #acteurs .container > div img {
+    margin-left: -10%;
+  }
+}
+@media (min-width: 600px) {
+  #about #acteurs img {
+    width: 100%;
+  }
+  #about #acteurs .container {
+    display: flex;
+  }
+  #about #acteurs .container ul {
+    padding-left: 0;
+  }
+  #about #acteurs .container div {
+    text-align: center;
+    width: 30%;
+    margin: 2em auto;
+  }
+  #about #acteurs .container div div {
+    width: 100%;
+  }
+}
+#about #soutiens {
+  padding: 1em 0;
+  align-items: center;
+}
+#about #soutiens img {
+  width: 100%;
+  margin: auto;
+}
+#about #soutiens p:nth-child(2n) {
+  margin-top: 2em;
+}
+@media (min-width: 600px) {
+  #about #soutiens .container {
+    display: flex;
+    align-items: center;
+  }
+  #about #soutiens img {
+    width: 30%;
+    height: max-content;
+    margin: auto;
+  }
+}
+#about-heading {
+  position: relative;
+  margin-bottom: 5%;
+}
+#about-heading h1,
+#about-heading h2 {
+  position: absolute;
+  color: #fdfdfd;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+#about-heading h1 {
+  display: block;
+  font-size: 1em;
+  top: 20%;
+}
+@media (min-width: 600px) {
+  #about-heading h1 {
+    font-size: 2em;
+  }
+}
+#about-heading h2 {
+  font-size: 0.8em;
+  top: 60%;
+}
+@media (min-width: 600px) {
+  #about-heading h2 {
+    font-size: 1.5em;
+  }
+}
 #black-filter {
   position: absolute;
   top: 0;
@@ -390,5 +514,24 @@ footer div li:first-child {
   margin: 0 auto 0 auto;
   padding: 0.5em;
   text-align: justify;
+}
+#profile {
+  text-align: center;
+}
+#profile h1 {
+  color: var(--main-green);
+  font-weight: normal;
+  font-size: 1.3em;
+  margin-bottom: 9%;
+}
+#profile .background-home {
+  width: 113%;
+  height: 100%;
+  margin-left: -13% !important;
+}
+#profile-heading {
+  overflow: hidden;
+  margin-bottom: 10%;
+  position: relative;
 }
 /*# sourceMappingURL=styles.css.map */

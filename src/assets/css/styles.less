@@ -302,6 +302,151 @@ footer{
   }
 }
 
+//PAGE ABOUT
+
+#about {
+  .background-home {
+    width: 100%;
+  }
+  h2{
+    text-align: center;
+  }
+  p.description{
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+
+  #programme{
+    h3{
+      color: var(--main-green);
+    }
+    img{
+      width: 100%;
+      margin-bottom: 10%;
+    }
+
+    @media(min-width: 600px){
+
+      .container{
+      display: flex;
+
+      div{
+        width: 40%;
+        margin: 5%;
+      }
+    }
+
+  }
+  }
+  #acteurs{
+    padding:  1em 0;
+    background-color: var(--third-green);
+    h3{
+      margin-top: 1em;
+      font-size: 1em;
+    }
+    img{
+      width: 40%;
+      border-radius: 5px;
+    }
+    @media(max-width: 600px){
+      .container>div{
+        display: flex;
+        margin: 1em;
+        div,img{
+          width: 45%;
+          margin: auto;
+        }
+        img{
+          margin-left: -10%;
+        }
+      }
+      .container>div:nth-child(2n){
+
+      }
+    }
+
+    @media(min-width: 600px){
+      img{
+      width: 100%;
+    }
+      .container{
+      display: flex;
+      ul{
+        padding-left: 0;
+      }
+      div{
+        text-align: center;
+        width: 30%;
+        margin: 2em auto;
+        div{
+          width: 100%;
+        }
+      }
+    }
+    }
+  }
+
+  #soutiens{
+    padding:  1em 0;
+    align-items: center;
+    img{
+      width: 100%;
+      margin: auto;
+
+    }
+    p:nth-child(2n){
+      margin-top: 2em;
+    }
+
+    @media(min-width: 600px){
+      .container{
+      display: flex;
+      align-items: center;
+    }
+      img{
+       width: 30%;
+       height: max-content;
+       margin: auto;
+
+     }
+    }
+
+
+  }
+}
+
+#about-heading {
+  position: relative;
+  margin-bottom: 5%;
+
+  h1, h2 {
+    position: absolute;
+    color: #fdfdfd;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  h1 {
+    display: block;
+    font-size: 1em;
+    top: 20%;
+    @media(min-width: 600px){
+      font-size: 2em;
+    }
+  }
+
+  h2 {
+    font-size: 0.8em;
+    top: 60%;
+    @media(min-width: 600px){
+      font-size: 1.5em;
+    }
+  }
+}
+
 #black-filter {
   position: absolute;
   top: 0;
@@ -393,7 +538,3 @@ footer{
     text-align: justify;
   }
 }
-
-
-
-//PAGE ABOUT
