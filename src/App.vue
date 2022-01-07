@@ -103,12 +103,12 @@
 <style lang="less">
 </style>
 <script>
-
 export default {
   name: 'App',
   components: {},
   data() {
     return {
+      article:'',
       utilisateur: {
         username: null,
         password: null,
@@ -139,6 +139,8 @@ export default {
     resetModal() {
       this.name = ''
       this.nameState = null
+      this.email=''
+      this.emailState = null
     },
     handleOk(bvModalEvt) {
       // Prevent modal from closing
@@ -156,6 +158,10 @@ export default {
       this.$nextTick(() => {
         this.$bvModal.hide('modal-prevent-closing')
       })
+    },
+    getID(){
+      this.article = this.media
+      console.log("oui",this.article)
     }
   }
 }

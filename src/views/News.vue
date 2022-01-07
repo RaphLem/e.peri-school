@@ -23,7 +23,9 @@
         <div>
           <b-dropdown text="-----------" ref="dropdown" size="8">
             <b-dropdown-form>
-              <b-form-checkbox v-for="keywords in keywords" value="mot" id="checkbox" class="mb-3" :key="keywords.id">{{keywords.title.rendered}}</b-form-checkbox>
+              <b-form-checkbox v-for="keywords in keywords" value="mot" id="checkbox" class="mb-3" :key="keywords.id">
+                {{keywords.title.rendered}}
+              </b-form-checkbox>
               <b-button size="sm">Filtrer</b-button>
             </b-dropdown-form>
             <form action=""></form>
@@ -31,47 +33,21 @@
         </div>
       </div>
     </div>
-    <div id="card-grid">
-      <div class="event-card">
-        <div class="event-title short-title">
-          Ceci est un titre tout à fait normal
+    <div>
+      <router-link to="/articles" id="card-grid" style=".lien{display: contents;
+        color: #000;text-decoration: none;} ">
+        <div v-for="media in liste_medias" :key="media.id" class="event-card">
+          <div class="event-title short-title">
+            {{ media.acf.label }}
+          </div>
+
+          <div class="event-grid">
+            <img class="event-image" :src=media.acf.file.url alt="">
+            <p>{{ media.acf.description }}</p>
+          </div>
         </div>
-        <div class="event-grid">
-          <img class="event-image" src="@/assets/img/picture/E-Perischool10Nov20TIML0227.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque eligendi, harum in
-            incidunt
-            mollitia.</p></div>
-      </div>
-      <div class="event-card">
-        <div class="event-title short-title">
-          Ceci est un titre tout à fait normal
-        </div>
-        <div class="event-grid">
-          <img class="event-image" src="@/assets/img/picture/E-Perischool10Nov20TIML0227.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque eligendi, harum in
-            incidunt
-            mollitia.</p></div>
-      </div>
-      <div class="event-card">
-        <div class="event-title short-title">
-          Ceci est un titre tout à fait normal
-        </div>
-        <div class="event-grid">
-          <img class="event-image" src="@/assets/img/picture/E-Perischool10Nov20TIML0227.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque eligendi, harum in
-            incidunt
-            mollitia.</p></div>
-      </div>
-      <div class="event-card">
-        <div class="event-title short-title">
-          Ceci est un titre tout à fait normal
-        </div>
-        <div class="event-grid">
-          <img class="event-image" src="@/assets/img/picture/E-Perischool10Nov20TIML0227.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur doloremque eligendi, harum in
-            incidunt
-            mollitia.</p></div>
-      </div>
+      </router-link>
+
     </div>
     <footer>
       <img id="logo-footer" src="@/assets/img/logos/Global-blanc.svg" alt="">
@@ -107,20 +83,27 @@ export default {
   name: "News",
   data() {
     return {
-      keywords:[],
+      keywords: [],
+      liste_medias: [],
     }
   },
-  created(){
+  created() {
     //Liste des mots-clés
     // eslint-disable-next-line no-undef
-    axios.get(param.host+"keywords")
-    .then(response=>{
-      console.log("Response", response);
-      this.keywords = response.data
-    })
-    .catch(error => console.log(error))
-  },
-  methods: {
+    axios.get(param.host + "keywords")
+        .then(response => {
+          console.log("Response", response);
+          this.keywords = response.data
+        })
+        .catch(error => console.log(error))
+
+    // eslint-disable-next-line no-undef
+    axios.get(param.host + "medias")
+        .then(response => {
+          console.log("Response", response);
+          this.liste_medias = response.data
+        })
+        .catch(error => console.log(error))
   }
 }
 </script>

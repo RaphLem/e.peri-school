@@ -1,19 +1,22 @@
 <template>
   <div id="home">
     <div id="home-heading">
-      <img src="@/assets/img/composants/backgroundvert-accueil.svg" class="background-home">
+      <img src="@/assets/img/composants/backgroundvert-accueil.svg" class="background-home" alt="">
       <img src="@/assets/img/logos/Global-gris.svg" id="logo-home" class="img-fluid" alt="">
       <img src="@/assets/img/icons/enfants.png" id="kids" alt="">
     </div>
     <p class="text-transition short-title">Découvrez toutes les nouvelles d'E.peri&school le programme éducatif formant
       les enfants au numérique !</p>
     <h1>Evénements à venir</h1>
+    <router-link to="/articles" id="card-grid" style=".lien{display: contents;color: #000;text-decoration: none;}">
     <div v-for="media in liste_medias" :key="media.id" class="event-card">
       <img class="event-image" :src=media.acf.file.url alt="">
       <div class="event-title short-title">
-        {{media.acf.label}}
+        {{ media.acf.label }}
       </div>
     </div>
+      </router-link>
+
 <!--    <div class="event-card">-->
 <!--      <img class="event-image" src="@/assets/img/picture/E-Perischool10Nov20TIML0352.jpg" alt="">-->
 <!--      <div class="event-title short-title">-->
@@ -60,6 +63,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      keywords:[],
       liste_medias:[],
     }
   },

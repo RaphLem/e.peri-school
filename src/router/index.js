@@ -5,6 +5,7 @@ import Mentions from "@/views/Mentions.vue";
 import News from "@/views/News.vue";
 import Contact from "@/components/Contact.vue";
 import Profile from "@/views/Profile.vue";
+import Articles from "@/views/Articles.vue";
 
 Vue.use(VueRouter)
 
@@ -41,6 +42,11 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/articles',
+    name: 'Articles',
+    component: Articles
   }
 ]
 
